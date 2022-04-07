@@ -1,5 +1,6 @@
 package com.example.cooperatives.entite;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,13 +20,18 @@ public class Produit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reference_produit")
     private Long reference_produit;
+
     @Column(name="libelle")
     private String libelle;
+
     @Column(name="prix")
     private double prix;
+
     @Column(name="description")
     private String description;
-    @OneToMany(fetch = FetchType.EAGER,
+
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY,
             mappedBy = "produit",
             cascade = {CascadeType.MERGE,
                     CascadeType.DETACH,

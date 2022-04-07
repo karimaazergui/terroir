@@ -1,11 +1,13 @@
 package com.example.cooperatives.entite;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
-public class MatierePremiere {
+public class MatierePremiere implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reference_matiere")
@@ -25,13 +27,16 @@ public class MatierePremiere {
     private double prix;
     @Column(name = "description")
     private String description;
+
     @ManyToMany
+    @JsonIgnore
     @JoinTable( name = "matierePremiereRegionAsso",
             joinColumns = @JoinColumn( name = "reference_matiere" ),
             inverseJoinColumns = @JoinColumn( name = "code" ) )
     List<Region> regionList=new ArrayList<>();
 
-    @OneToMany(mappedBy = "matierePremiere",cascade = CascadeType.PERSIST)
+
+    @OneToMany(mappedBy = "matierePremiere",cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     List<ProduitMatierePremierAsso> produitMatieresPremierAsso=new ArrayList<>();
 
 

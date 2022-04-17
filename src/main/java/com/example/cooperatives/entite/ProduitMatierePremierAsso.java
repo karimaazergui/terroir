@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class ProduitMatierePremierAsso {
     @EmbeddedId
     ProduitMatierePremierKey id=new ProduitMatierePremierKey();
-    @ManyToOne(cascade = {CascadeType.ALL } )
+    @ManyToOne()
     @JsonIgnore
     @MapsId("idProduit")
     @JoinColumn(name = "reference_produit")
@@ -19,13 +19,13 @@ public class ProduitMatierePremierAsso {
 
 
     @JsonIgnore
-    @ManyToOne(cascade = {CascadeType.ALL } )
+    @ManyToOne()
     @MapsId("idMatierePremiere")
     @JoinColumn(name = "reference_matiere" )
     MatierePremiere matierePremiere;
 
 
-    @JsonIgnore
+
     private int quantite;
 
     public Produit getProduit() {

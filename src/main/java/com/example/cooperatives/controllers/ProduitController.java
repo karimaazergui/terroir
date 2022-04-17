@@ -3,38 +3,40 @@ package com.example.cooperatives.controllers;
 import com.example.cooperatives.entite.MatierePremiere;
 import com.example.cooperatives.entite.Produit;
 import com.example.cooperatives.entite.ProduitMatierePremierAsso;
-import com.example.cooperatives.repositories.ProduitMatiereAssoRepo;
-import com.example.cooperatives.repositories.ProduitRepo;
+import com.example.cooperatives.services.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/produit")
 public class ProduitController {
-    @Autowired
-    ProduitRepo produitRepo;
+
 
     @Autowired
-    ProduitMatiereAssoRepo assoRepo;
+    IProductService iProduitService;
+
+    //@Autowired
+    //ProduitMatiereAssoRepo assoRepo;
 
     @GetMapping("/{id}")
-    public Optional<Produit> getproduit(@PathVariable Long id ){
-        return produitRepo.findById(id);
+    public Produit getproduit(@PathVariable Long id ){
+        return iProduitService.findById(id);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/all")
     public Iterable<Produit> getAllProduit(){
-        return produitRepo.findAll();
+        return iProduitService.findAll();
     }
 
     @PostMapping("/add")
     public void addProduit(@RequestBody Produit produit){
-        produitRepo.save( produit);
+        iProduitService.save( produit);
     }
 
     @GetMapping("/delete/{id}")
@@ -42,18 +44,18 @@ public class ProduitController {
 
         //produitRepo.deleteAllById(Collections.singleton(id));
 
-        produitRepo.deleteById(id);
+        iProduitService.deleteById(id);
     }
 
     @PostMapping ("/update")
     public void updateProduit(@RequestBody Produit produit){
-        produitRepo.save(produit);
+        iProduitService.save(produit);
     }
 
     @GetMapping("/{id}/mp")
     public List<MatierePremiere> getMP(@PathVariable long id){
         //return assoRepo.findByProduit(produitRepo.findById(id).get());
-        List<ProduitMatierePremierAsso> assos = produitRepo.findById(id).get().getProduitMatieresPremierAsso();
+        List<ProduitMatierePremierAsso> assos = iProduitService.findById(id).getProduitMatieresPremierAsso();
         //return asso.getMatierePremiere();
         List<MatierePremiere> matierePremieres = new ArrayList<>();
         for (ProduitMatierePremierAsso mpa: assos) {
@@ -61,5 +63,10 @@ public class ProduitController {
         }
 
         return matierePremieres;
+    }
+
+    @GetMapping("/test/{id}")
+    public void test(@PathVariable long id){
+        iProduitService.deleteMetiereFromProduit(id,2);
     }
 }

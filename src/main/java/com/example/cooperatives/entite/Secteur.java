@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,11 +20,18 @@ public class Secteur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_secteur")
     private Long id_secteur;
-    @Column(name = "libelle")
-    private  String libelle;
+    @Column(name = "name")
+    private  String name;
 
+
+    @OneToMany(fetch = FetchType.LAZY,
+            mappedBy = "secteur",
+            cascade = {CascadeType.MERGE,
+                    CascadeType.DETACH,
+                    CascadeType.PERSIST})
+    Set<CooperativeSecteurAsso> cooperativeSecteurAsso;
     @ManyToMany
-    @JoinTable( name = "cooperativeSecterurAsso",
+    @JoinTable( name = "cooperativeSecteurAsso",
             joinColumns = @JoinColumn( name = "id_secteur" ),
             inverseJoinColumns = @JoinColumn( name = "id_cooperative" ) )
     List<Cooperative> cooperativeList=new ArrayList<>();
@@ -35,11 +44,11 @@ public class Secteur {
         this.id_secteur = id_secteur;
     }
 
-    public String getLibelle() {
-        return libelle;
+    public String getName() {
+        return name;
     }
 
-    public void setLibelle(String libelle) {
-        this.libelle = libelle;
+    public void setName(String libelle) {
+        this.name = name;
     }
 }

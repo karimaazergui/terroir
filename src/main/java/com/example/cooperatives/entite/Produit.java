@@ -77,5 +77,23 @@ public class Produit {
         this.description = description;
     }
 
+    public List<ProduitMatierePremierAsso> getProduitMatieresPremierAsso() {
+        return produitMatieresPremierAsso;
+    }
 
+    public void setProduitMatieresPremierAsso(List<ProduitMatierePremierAsso> produitMatieresPremierAsso) {
+        this.produitMatieresPremierAsso = produitMatieresPremierAsso;
+    }
+
+    public List<Categorie> getCategorieList() {
+        return categorieList;
+    }
+
+    public void setCategorieList(List<Categorie> categorieList) {
+        this.categorieList = categorieList;
+    }
+
+    public void addCategorie(Categorie categorie){
+        this.categorieList.add(categorie);
+    }
 }

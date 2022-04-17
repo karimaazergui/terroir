@@ -9,6 +9,7 @@ import com.example.cooperatives.repositories.AppRoleRepository;
 import com.example.cooperatives.repositories.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,8 +20,8 @@ public class AccountService implements IaccountService{
     @Autowired
     private AppRoleRepository roleRepository;
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired()
+    private PasswordEncoder bCryptPasswordEncoder;
 
     public AppUser findUserByUsername(String username) {
         return userRepository.findByUsername(username);

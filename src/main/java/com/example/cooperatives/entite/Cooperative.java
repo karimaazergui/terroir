@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -29,8 +30,14 @@ public class Cooperative {
     @JoinColumn(name="code", nullable=false)
     private Region region;
 
+    @OneToMany(fetch = FetchType.LAZY,
+            mappedBy = "cooperative",
+            cascade = {CascadeType.MERGE,
+                    CascadeType.DETACH,
+                    CascadeType.PERSIST})
+    Set<CooperativeSecteurAsso> cooperativeSecteurAsso;
     @ManyToMany
-    @JoinTable( name = "cooperativeSecterurAsso",
+    @JoinTable( name = "cooperativeSecteurAsso",
             joinColumns = @JoinColumn( name = "id_cooperative" ),
             inverseJoinColumns = @JoinColumn( name = "id_secteur" ) )
     List<Secteur> secteurList=new ArrayList<>();

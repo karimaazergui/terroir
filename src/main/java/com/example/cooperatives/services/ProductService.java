@@ -1,62 +1,109 @@
 package com.example.cooperatives.services;
 
-import com.example.tpecommerce001.entities.Category;
-import com.example.tpecommerce001.entities.Product;
-import com.example.tpecommerce001.repositories.ProductRepository;
-import com.example.tpecommerce001.repositories.CategoryRepository;
+import com.example.cooperatives.entite.*;
+import com.example.cooperatives.repositories.CategorieRepo;
+import com.example.cooperatives.repositories.MatierePremiereRepo;
+import com.example.cooperatives.repositories.ProduitMatiereAssoRepo;
+import com.example.cooperatives.repositories.ProduitRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
 public class ProductService implements IProductService{
 
     @Autowired
-    ProductRepository productRepository;
+    ProduitRepo produitRepo;
 
     @Autowired
-    CategoryRepository categoryRepository;
+    CategorieRepo categorieRepo;
 
-    public List<Product> findAll(){
-        return productRepository.findAll();
+    @Autowired
+    ProduitMatiereAssoRepo assoRepo;
+
+    @Autowired
+    MatierePremiereRepo matierePremiereRepo;
+
+    public Iterable<Produit> findAll(){
+        return produitRepo.findAll();
     }
 
-    public Product findById(Long id){
-        return productRepository.findById(id).get();
+    public Produit findById(Long id){
+        return produitRepo.findById(id).get();
     }
 
     @Override
-    public Product save(Product product) {
-        return productRepository.save(product);
+    public Produit save(Produit product) {
+        return produitRepo.save(product);
     }
 
     @Override
-    public Product upProduct(Long id, Product product) {
-        Product pr = productRepository.findById(id).get();
-        pr.setCurrentPrice(product.getCurrentPrice());
-        return productRepository.save(pr);
+    public Produit upProduct(Long id, Produit product) {
+        Produit pr = produitRepo.findById(id).get();
+        pr.setPrix(product.getPrix());
+        return produitRepo.save(pr);
     }
 
     @Override
     public void deleteById(Long id) {
-        productRepository.deleteById(id);
+        produitRepo.deleteById(id);
     }
 
     @Override
-    public void productCat(String nomp, String nomc) {
-        Product pr = productRepository.findByName(nomp);
-        Category cat = categoryRepository.findByName(nomc);
-        pr.setCategory(cat);
-        productRepository.save(pr);
+    public void produitCat(String nomp, String nomc) {
+        Produit pr = produitRepo.findByLibelle(nomp);
+        Categorie cat = categorieRepo.findByLibelle(nomc);
+        pr.addCategorie(cat);
+        produitRepo.save(pr);
     }
 
     @Override
-    public void updateProduct(String nomp, String nomc) {
-        Product product = productRepository.findByName(nomp);
-        Category category = categoryRepository.findByName(nomc);
-        product.setCategory(category);
-        productRepository.save(product);
+    public void addCategoriToProduit(long id, Categorie... categories) {
+        Produit produit = produitRepo.findById(id).get();
+        produit.setCategorieList(List.of(categories));
+        produitRepo.save(produit);
     }
+
+    @Override
+    public void addMatiereToProduit(long id, ProduitMatierePremierAsso... produitMatierePremierAssos) {
+        Produit produit = produitRepo.findById(id).get();
+        produit.setProduitMatieresPremierAsso(List.of(produitMatierePremierAssos));
+        produitRepo.save(produit);
+
+    }
+
+    @Override
+    public List<MatierePremiere> getMatiereOfProduit(long id) {
+        List<ProduitMatierePremierAsso> assos = produitRepo.findById(id).get().getProduitMatieresPremierAsso();
+        List<MatierePremiere> matierePremieres = new ArrayList<>();
+        for (ProduitMatierePremierAsso mpa: assos) {
+            matierePremieres.add(mpa.getMatierePremiere());
+        }
+        return matierePremieres;
+    }
+
+    @Override
+    public List<Categorie> getCategorieOfProduit(long id) {
+        Produit produit = produitRepo.findById(id).get();
+        return produit.getCategorieList();
+    }
+
+    @Override
+    public void deleteMetiereFromProduit(long id, long... idms) {
+        Produit produit = produitRepo.findById(id).get();
+
+        for (long idm: idms){
+            MatierePremiere matierePremiere = matierePremiereRepo.findById(idm).get();
+            ProduitMatierePremierAsso asso = assoRepo.findByMatierePremiereAndProduit(matierePremiere,produit);
+            assoRepo.delete(asso);
+        }
+
+
+    }
+
 
 }

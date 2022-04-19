@@ -22,4 +22,5 @@ public interface IProductService {
     public List<MatierePremiere> getMatiereOfProduit(long id);
     public List<Categorie> getCategorieOfProduit(long id);
     public void deleteMetiereFromProduit(long id , long...idms);
+
 }

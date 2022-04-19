@@ -54,15 +54,9 @@ public class ProduitController {
 
     @GetMapping("/{id}/mp")
     public List<MatierePremiere> getMP(@PathVariable long id){
-        //return assoRepo.findByProduit(produitRepo.findById(id).get());
-        List<ProduitMatierePremierAsso> assos = iProduitService.findById(id).getProduitMatieresPremierAsso();
-        //return asso.getMatierePremiere();
-        List<MatierePremiere> matierePremieres = new ArrayList<>();
-        for (ProduitMatierePremierAsso mpa: assos) {
-            matierePremieres.add(mpa.getMatierePremiere());
-        }
 
-        return matierePremieres;
+
+        return iProduitService.getMatiereOfProduit(id);
     }
 
     @GetMapping("/test/{id}")

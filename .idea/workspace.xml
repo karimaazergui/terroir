@@ -4,49 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2654b5d9-61dd-41df-b416-8c854b576c9c" name="Changes" comment="&quot;07/04_security&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_31_03_2022_19_52_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_31_03_2022_19_52__Changes_.xml" beforeDir="false" />
+    <list default="true" id="2654b5d9-61dd-41df-b416-8c854b576c9c" name="Changes" comment="&quot;17/04_security_services(prod,coop,sec)&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/controllers/CategorieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/controllers/MatierePremerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/CategorieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/ICategorieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/IMatierePremiereService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/MatierePremiereService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/CooperativesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/CooperativesApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/controllers/ProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/controllers/ProduitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Cooperative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Cooperative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Produit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/ProduitMatierePremierAsso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/ProduitMatierePremierAsso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Secteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Secteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/CategorieRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/CategorieRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/CooperativeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/CooperativeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/ProduitMatiereAssoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/ProduitMatiereAssoRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/ProduitRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/ProduitRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/SecteurRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories/SecteurRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/CategorieService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/CooperativeService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/MatierePremiereService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/ProduitService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/RegionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services/SecteurService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/CooperativesApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/CooperativesApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/controllers/ProduitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/controllers/ProduitController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative$CooperativeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative$CooperativeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Produit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Produit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/ProduitMatierePremierAsso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/ProduitMatierePremierAsso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur$SecteurBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur$SecteurBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/CategorieRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/CategorieRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/CooperativeRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/CooperativeRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/ProduitMatiereAssoRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/ProduitMatiereAssoRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/ProduitRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/ProduitRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/SecteurRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/repositories/SecteurRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/CategorieService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/CooperativeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/CooperativeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/MatierePremiereService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/ProduitService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/RegionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/SecteurService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/services/SecteurService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +96,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example/cooperatives/repositories" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example/cooperatives/services" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -136,11 +104,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\intel\Desktop\terroir\src\main\java\com\example\cooperatives\aop" />
       <recent name="C:\Users\intel\Desktop\terroir\src\main\java\com\example\cooperatives\repositories" />
       <recent name="C:\Users\intel\Desktop\terroir\src\main\java\com\example\cooperatives\entite" />
       <recent name="C:\Users\intel\Desktop\terroir\src\main\java\com\example\cooperatives\services" />
       <recent name="C:\Users\intel\Desktop\terroir\src\main\java\com\example\cooperatives\exception" />
-      <recent name="C:\Users\intel\Desktop\terroir\src\main\java\com\example\cooperatives\security" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CooperativesApplication">
@@ -239,7 +207,9 @@
       <workItem from="1648763686442" duration="3205000" />
       <workItem from="1649308241015" duration="10358000" />
       <workItem from="1649934068104" duration="10596000" />
-      <workItem from="1650193091019" duration="5207000" />
+      <workItem from="1650193091019" duration="5528000" />
+      <workItem from="1650389014335" duration="1614000" />
+      <workItem from="1650393863190" duration="275000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;07/04&quot;">
       <created>1649324732091</created>
@@ -255,7 +225,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649327560724</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;17/04_security_services(prod,coop,sec)&quot;">
+      <created>1650198804624</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650198804624</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;17/04_security_services(prod,coop,sec)&quot;">
+      <created>1650198932712</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650198932712</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +259,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;07/04&quot;" />
     <MESSAGE value="&quot;07/04_security&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;07/04_security&quot;" />
+    <MESSAGE value="&quot;17/04_security_services(prod,coop,sec)&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;17/04_security_services(prod,coop,sec)&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,3 @@
+2022-04-20 18:16:39,521 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-2] ProduitController.getproduit id = [1]
+2022-04-20 18:18:10,788 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-1] ProduitController.getproduit id = [1] 2022-04-20T18:18:10.788997700
+2022-04-20 18:19:38,695 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-1] ProduitController.getproduit id = [1] 2022-04-20T18:19:38.695156700

@@ -7,11 +7,13 @@ import com.example.cooperatives.entite.Region;
 import com.example.cooperatives.repositories.MatierePremiereRepo;
 import com.example.cooperatives.repositories.ProduitMatiereAssoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MatierePremiereService implements IMatierePremiereService{
 
     @Autowired

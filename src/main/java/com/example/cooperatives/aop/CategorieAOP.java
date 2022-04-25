@@ -1,11 +1,9 @@
 package com.example.cooperatives.aop;
 
-import ch.qos.logback.classic.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDateTime;
@@ -13,14 +11,13 @@ import java.util.Arrays;
 
 @Aspect
 @Configuration
-public class ProduitAOP {
-    private static final Logger logger = (Logger) LoggerFactory.getLogger("ProduitLogger");
+public class CategorieAOP {
 
-    @Pointcut("execution(* com.example.cooperatives.controllers.ProduitController.*(..))")
-    public void traceProduitPointCut(){}
+    @Pointcut("execution(* com.example.cooperatives.services.CategorieService.*(..))")
+    public void traceCategoriePointCut(){}
 
-    @Around("traceProduitPointCut()")
-    public Object logProduitTransaction(ProceedingJoinPoint joinPoint) throws Throwable{
+    @Around("traceCategoriePointCut()")
+    public Object logCategorieTransaction(ProceedingJoinPoint joinPoint) throws Throwable{
         Object[] args = joinPoint.getArgs();
         String s = " id = " + Arrays.toString(args);
 
@@ -32,9 +29,7 @@ public class ProduitAOP {
             nomMethode = joinPoint.getTarget().getClass().getSimpleName() + "."
                     + joinPoint.getSignature().getName() + s;
         }
-        System.out.println(nomMethode + " "+ LocalDateTime.now() );
-        logger.info(nomMethode + " "+ LocalDateTime.now());
+        System.out.println(nomMethode + " "+ LocalDateTime.now().toString() );
         return joinPoint.proceed();
     }
-
 }

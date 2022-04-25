@@ -8,10 +8,11 @@ import com.example.cooperatives.entite.Secteur;
 import com.example.cooperatives.repositories.CooperativeRepo;
 import com.example.cooperatives.repositories.SecteurRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public class SecteurService implements ISecteurService  {
 
     @Autowired

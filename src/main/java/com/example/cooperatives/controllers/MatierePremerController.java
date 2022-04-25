@@ -3,6 +3,7 @@ package com.example.cooperatives.controllers;
 import com.example.cooperatives.entite.MatierePremiere;
 import com.example.cooperatives.entite.Produit;
 import com.example.cooperatives.entite.Region;
+import com.example.cooperatives.services.IMatierePremiereService;
 import com.example.cooperatives.services.MatierePremiereService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,12 +15,10 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/MatierePremier")
 public class MatierePremerController {
-    @Bean
-    MatierePremiereService getMatierePremiereService() {
-        return new MatierePremiereService();
-    }
+
+
     @Autowired
-    MatierePremiereService matierePremiereService;
+    IMatierePremiereService matierePremiereService;
 
     @PostMapping("/add")
     public void saveMatierePremier(@RequestBody MatierePremiere matierePremiere) {
@@ -38,7 +37,6 @@ public class MatierePremerController {
         matierePremiereService.updateMatierepremiere(matierePremiere);
     }
     @GetMapping("/productOfMatierePremier/{id}")
-
     public List<Produit> getproductOfMatierePremier(@PathVariable Long id) {
         return matierePremiereService.getListProduitsParMatierePremiere(id);
     }

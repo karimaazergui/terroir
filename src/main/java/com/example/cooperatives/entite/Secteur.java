@@ -1,5 +1,6 @@
 package com.example.cooperatives.entite;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,12 +25,14 @@ public class Secteur {
     private  String name;
 
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY,
             mappedBy = "secteur",
             cascade = {CascadeType.MERGE,
                     CascadeType.DETACH,
                     CascadeType.PERSIST})
     Set<CooperativeSecteurAsso> cooperativeSecteurAsso;
+    @JsonIgnore
     @ManyToMany
     @JoinTable( name = "cooperativeSecteurAsso",
             joinColumns = @JoinColumn( name = "id_secteur" ),
@@ -48,7 +51,7 @@ public class Secteur {
         return name;
     }
 
-    public void setName(String libelle) {
+    public void setName(String name) {
         this.name = name;
     }
 }

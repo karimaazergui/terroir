@@ -1,5 +1,6 @@
 package com.example.cooperatives.entite;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,8 +23,10 @@ public class Region {
     private Long code;
     @Column(name = "nom")
     private String nom;
+    @JsonIgnore
     @OneToMany(mappedBy="region")
     private Set<Cooperative> listCooperatives;
+    @JsonIgnore
     @ManyToMany
     @JoinTable( name = "matierePremiereRegionAsso",
             joinColumns = @JoinColumn( name = "code" ),

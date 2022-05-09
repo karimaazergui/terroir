@@ -1,5 +1,6 @@
 package com.example.cooperatives.entite;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,10 +27,13 @@ public class Cooperative {
     private int tele;
     @Column(name = "address")
     private String address;
+
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="code", nullable=false)
     private Region region;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY,
             mappedBy = "cooperative",
             cascade = {CascadeType.MERGE,

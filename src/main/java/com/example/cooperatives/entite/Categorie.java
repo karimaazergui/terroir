@@ -23,6 +23,7 @@ public class Categorie {
  private String libelle;
 
 
+
     @ManyToMany
     @JoinTable( name = "produitCategorieAsso",
             joinColumns = @JoinColumn( name = "id_categorie" ),

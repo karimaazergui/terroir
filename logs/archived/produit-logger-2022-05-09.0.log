@@ -1,0 +1,13 @@
+2022-05-09 11:32:07,013 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-1] ProduitController.getproduit id = [1] 2022-05-09T11:32:07.012368
+2022-05-09 11:32:25,340 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-3] ProduitController.getproduit id = [1] 2022-05-09T11:32:25.340022400
+2022-05-09 11:34:46,896 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-5] ProduitController.getproduit id = [1] 2022-05-09T11:34:46.896337700
+2022-05-09 11:35:01,861 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-6] ProduitController.getproduit id = [2] 2022-05-09T11:35:01.861483500
+2022-05-09 11:41:54,578 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-4] ProduitController.getAllProduit 2022-05-09T11:41:54.578175700
+2022-05-09 11:42:57,734 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-6] ProduitController.getproduit id = [2] 2022-05-09T11:42:57.733172
+2022-05-09 11:43:03,428 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-7] ProduitController.getMP id = [1] 2022-05-09T11:43:03.428104100
+2022-05-09 11:43:58,235 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-8] ProduitController.getproduit id = [1] 2022-05-09T11:43:58.235733300
+2022-05-09 11:44:55,170 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-2] ProduitController.updateProduit id = [Produit(reference_produit=1, libelle=AS3H, prix=200.0, description=nouveau Produit de l'Atlas, produitMatieresPremierAsso=[], categorieList=[])] 2022-05-09T11:44:55.170468500
+2022-05-09 11:45:03,203 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-4] ProduitController.getproduit id = [1] 2022-05-09T11:45:03.203681700
+2022-05-09 11:45:05,481 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-5] ProduitController.getproduit id = [1] 2022-05-09T11:45:05.481295800
+2022-05-09 11:57:38,183 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-1] ProduitController.getproduit id = [1] 2022-05-09T11:57:38.183911600
+2022-05-09 11:58:36,812 INFO com.example.cooperatives.aop.ProduitAOP [http-nio-8080-exec-1] ProduitController.getproduit id = [1] 2022-05-09T11:58:36.812876400

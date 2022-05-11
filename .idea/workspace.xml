@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2654b5d9-61dd-41df-b416-8c854b576c9c" name="Changes" comment="&quot;final_version&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/controllers/CooperativeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/controllers/SecteurController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/produit-logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/produit-logger.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Categorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Cooperative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Cooperative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Region.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Secteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cooperatives/entite/Secteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative$CooperativeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative$CooperativeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Cooperative.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Region$RegionBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Region$RegionBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Region.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Region.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Categorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Categorie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur$SecteurBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur$SecteurBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cooperatives/entite/Secteur.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +210,7 @@
       <workItem from="1650393863190" duration="1217000" />
       <workItem from="1650445026908" duration="2877000" />
       <workItem from="1650911009619" duration="934000" />
-      <workItem from="1652091371102" duration="3107000" />
+      <workItem from="1652091371102" duration="3937000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;07/04&quot;">
       <created>1649324732091</created>
@@ -269,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650911347467</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&quot;final_version&quot;">
+      <created>1652094709549</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652094709549</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
